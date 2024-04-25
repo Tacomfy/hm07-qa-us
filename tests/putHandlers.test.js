@@ -9,10 +9,10 @@ const requestBody = {  "productsList": [
   ],
   "name": "string"}
 
-test('PutURL', async () => {
+test('PUT Request Test: Should return 200 status code for PUT request to /kits/3:', async () => {
     let actualStatusCode
 	try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/2`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/3`, {
 			
 			method: 'PUT',
 			headers: {
@@ -28,10 +28,10 @@ test('PutURL', async () => {
 });
 
 
-test('Put body', async () => {
+test('PUT Request Test: Should have "ok" property set to true in response body for PUT request to /kits/3:', async () => {
     let actualReponseBody
 	try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/2`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/3`, {
 			
 			method: 'PUT',
 			headers: {

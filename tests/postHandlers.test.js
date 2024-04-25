@@ -10,7 +10,7 @@ const requestBody = {
 	  ]
 }
 
-test('Post Status', async () => {
+test('POST Request Test: Should return 201 status code for POST request to /orders:', async () => {
     let actualStatusCode;
     try {
         const response = await fetch(`${config.API_URL}/api/v1/orders`, {
@@ -29,7 +29,7 @@ test('Post Status', async () => {
 });
 
 
-test('Post body', async () => {
+test('POST Request Test: Should have correct courierService property in response body for POST request to /orders:', async () => {
     let actualReponseBody;
     try {
         const response = await fetch(`${config.API_URL}/api/v1/orders`, {
